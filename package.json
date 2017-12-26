@@ -1,0 +1,20 @@
+{
+  "name": "parcel_blog",
+  "version": "1.0.0",
+  "description": "a blog build from parcel bundle",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "keywords": [
+    "parcel",
+    "bundle",
+    "blog"
+  ],
+  "author": "Nooldey",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.3.1"
+  }
+}
