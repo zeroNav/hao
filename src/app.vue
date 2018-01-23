@@ -1,5 +1,10 @@
 <template>
-    <div class="hello">hello, {{ name }}</div>
+    <div class="z-parcel">
+        hello, {{ name }}
+        <p>
+            lallal
+        </p>
+    </div>
 </template>
 
 <script>
@@ -11,9 +16,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss">
-    .hello {
-        color: red;
-    }
-</style>
