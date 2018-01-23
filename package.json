@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "parcel src/index.html -p 9527",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html -d public/dist",
+    "prod": "parcel build src/index.html -d public/prod --no-cache"
   },
   "keywords": [
     "parcel",
