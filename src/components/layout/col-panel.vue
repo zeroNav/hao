@@ -22,6 +22,7 @@
 .top {
   height: 76px;
   background-color: #fff;
+  z-index: 10;
 }
 .col-wrap {
     width: 100%;
