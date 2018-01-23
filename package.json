@@ -4,7 +4,7 @@
   "description": "a blog build by parcel-bundle and vuejs",
   "main": "src/index.js",
   "scripts": {
-    "dev": "parcel src/index.html -p 9527",
+    "dev": "npm run clean && parcel src/index.html -p 9527",
     "build": "parcel build src/index.html --out-dir public/dist/ --public-url ./",
     "prod": "parcel build src/index.html --out-dir public/prod/ --public-url ./ --no-cache",
     "clean": "rimraf .cache dist"
@@ -36,7 +36,6 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions",
-    "ie >= 9"
+    "last 2 versions"
   ]
 }

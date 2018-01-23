@@ -1,16 +1,23 @@
 <template>
-    <col-panel>
-        <div slot="topbar">我是顶部栏</div>
-        <nav slot="navbar">我是侧边栏</nav>
-        <section slot="panel">我是主界面</section>
+    <col-panel class="home_wrap">
+        <div slot="topbar" class="topbar">
+            <img src="" alt="" class="logo">
+            <h2>我是标题2</h2>
+        </div>
+        <!-- 我是侧边栏 -->
+        <navigator slot="navbar"/>
+        <!-- 我是主界面 -->
+        <router-view slot="panel" />
     </col-panel>
 </template>
 
 <script>
     import ColPanel from '../../components/layout/col-panel.vue'
+    import Navigator from '../../components/navigator.vue'
     export default {
         components: {
-            ColPanel
+            ColPanel,
+            Navigator
         },
         data() {
             return {
@@ -19,3 +26,7 @@
         }
     }
 </script>
+
+<style lang="scss">
+    @import '../../style/page/home.scss';
+</style>

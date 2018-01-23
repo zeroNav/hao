@@ -3,14 +3,19 @@
 * @Author-Email: <nooldey@gmail.com> 
 * @Date: 2018-01-23 14:56:10 
  * @Last Modified by: nooldey
- * @Last Modified time: 2018-01-23 15:06:46
+ * @Last Modified time: 2018-01-23 19:08:34
 * @Description: 通用样式变量
 */
 
 /* font */
 $font-size: 14px;
-$font-color: rgb(167, 32, 32);
+$font-color: #333;
 $font-family: -apple-system, SF UI Display, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+
+/* layout */
+$topbar-height: 76px;
+$navbar-color: #fff;
+$navbar-bg: #f8f8f8;
 
 /* color */
 

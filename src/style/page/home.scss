@@ -1,0 +1,9 @@
+@import '../common/_const.scss';
+
+.home_wrap {
+    .topbar {
+        height: 100%;
+        padding: 10px;
+        border-bottom: 3px solid $color-red;
+    }
+}
