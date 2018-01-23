@@ -3,9 +3,12 @@
  * @Author-Email: <nooldey@gmail.com> 
  * @Date: 2018-01-23 14:57:15 
  * @Last Modified by: nooldey
- * @Last Modified time: 2018-01-23 15:02:57
+ * @Last Modified time: 2018-01-23 16:46:48
  * @Description: 入口样式（全站基础样式）
  */
 
-@import './common/_const.scss', './common/_reset.scss';
+@import
+    './common/_const.scss',
+    './common/_reset.scss',
+    './common/_transition.scss';
 
