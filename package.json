@@ -1,5 +1,5 @@
 {
-  "name": "parcel_blog",
+  "name": "vue-parcel-demo",
   "version": "1.0.0",
   "description": "a blog build by parcel-bundle and vuejs",
   "main": "src/index.js",
