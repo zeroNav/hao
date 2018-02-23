@@ -23,7 +23,9 @@
 }
 .top {
 	height: $topbar-height;
-	background-color: #fff;
+	font-size: 13px;
+	color: $topbar-color;
+	background-color: $topbar-bg;
 }
 .col-wrap {
 	width: 100%;
@@ -32,7 +34,7 @@
 	justify-content: flex-start;
 	.nav {
 		flex: none;
-		width: 260px;
+		width: 220px;
 		height: 100%;
 		color: $navbar-color;
 		background-color: $navbar-bg;

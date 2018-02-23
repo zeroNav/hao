@@ -2,8 +2,18 @@
 
 .home_wrap {
     .topbar {
+        display: flex;
+        align-items: center;
         height: 100%;
         padding: 10px;
-        border-bottom: 3px solid $color-red;
+        border-bottom: 2px solid $color-red;
+        img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+        a {
+            margin-left: 20px;
+        }
     }
 }

@@ -1,8 +1,8 @@
 <template>
     <col-panel class="home_wrap">
         <div slot="topbar" class="topbar">
-            <img src="" alt="" class="logo">
-            <h2>我是标题2</h2>
+            <img src="https://avatars3.githubusercontent.com/u/13229398?s=400&v=4" alt="" class="logo">
+            <a>网址导航站</a>
         </div>
         <!-- 我是侧边栏 -->
         <navigator slot="navbar"/>

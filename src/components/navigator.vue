@@ -1,18 +1,16 @@
 <template>
-	<nav>
+	<ul class="side_menu">
 		<template v-for="(item,i) in routes">
-			<router-link :key="i" :to="'/' + item.path" v-if="!item.children || !item.children.length">
+			<router-link tag="li" :key="i" :to="'/' + item.path" v-if="!item.children || !item.children.length">
 				{{ item.name }}
 			</router-link>
 			<template v-else v-for="(child,j) in item.children">
-				<router-link :key="item.path+j" :to="'/' + item.path + '/' + child.path">
+				<router-link tag="li" :key="item.path+j" :to="'/' + item.path + '/' + child.path">
 					{{ child.name }}
 				</router-link>
 			</template>
 		</template>
-		<!-- test -->
-		<div v-for="n in 1000" :key="'test'+n">呵呵呵呵</div>
-	</nav>
+	</ul>
 </template>
 
 <script>
@@ -28,3 +26,11 @@ export default {
 }
 </script>
 
+<style lang="scss" scoped>
+	.side_menu {
+		li {
+			display: block;
+			padding: 10px 15px;
+		}
+	}
+</style>
