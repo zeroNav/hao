@@ -31,6 +31,10 @@ export default {
 		li {
 			display: block;
 			padding: 10px 15px;
+			cursor: pointer;
+			&:hover {
+				color: #333;
+			}
 		}
 	}
 </style>
