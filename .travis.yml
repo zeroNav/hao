@@ -13,7 +13,7 @@ deploy:
   skip-cleanup: true
   github-token: "${GH_TOKEN}"
   keep-history: true
-  local-dir: dist
+  local-dir: public/dist
   on:
     branch: master
 env:
