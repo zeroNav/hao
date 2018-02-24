@@ -1,32 +1,35 @@
  /* 
- * @Author: nooldey 
- * @Author-Email: <nooldey@gmail.com> 
- * @Date: 2018-01-23 16:39:27 
+  * @Author: nooldey 
+  * @Author-Email: <nooldey@gmail.com> 
+  * @Date: 2018-01-23 16:39:27 
  * @Last Modified by: nooldey
- * @Last Modified time: 2018-02-23 20:40:33
- * @Description: 路由列表
- */
+ * @Last Modified time: 2018-02-24 17:16:22
+  * @Description: 路由列表
+  */
 
-import Home from '../view/home/index.vue'
-import Category from '../view/category/index.vue'
-import Detail from '../view/detail/index.vue'
+ import Layout from '../view/layout/index.vue'
+ import Home from '../view/home/index.vue'
+ import Detail from '../view/detail/index.vue'
+ import AddLink from '../view/add/index.vue'
 
-export default [
-    { 
-        path: '',
-        component: Home,
-        children: [
-            {
-                path: '',
-                name: '导航首页',
-                component: Category
-            },
-            {
-                path: 'detail',
-                name: '子类页面',
-                component: Detail
-            }
-        ]
-    }
-    
-]
+ export default [{
+     path: '',
+     component: Layout,
+     children: [{
+             path: '',
+             name: '导航首页',
+             component: Home
+         },
+         {
+             path: 'cat/:cat',
+             props: true,
+             name: '子类页面',
+             component: Detail
+         },
+         {
+             path: 'add',
+             name: '提交链接',
+             component: AddLink
+         }
+     ]
+ }]
