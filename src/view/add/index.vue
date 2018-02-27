@@ -51,7 +51,7 @@ export default {
         }
     },
     mounted () {
-        this.getCatList()
+        // this.getCatList()
     },
     methods: {
         getCatList() {

@@ -3,7 +3,7 @@
   * @Author-Email: <nooldey@gmail.com> 
   * @Date: 2018-01-23 16:39:27 
  * @Last Modified by: nooldey
- * @Last Modified time: 2018-02-24 17:16:22
+ * @Last Modified time: 2018-02-27 10:27:10
   * @Description: 路由列表
   */
 
@@ -27,9 +27,16 @@
              component: Detail
          },
          {
-             path: 'add',
-             name: '提交链接',
-             component: AddLink
-         }
+             path: 'usr',
+             name: '登录用户',
+             children: [
+                {
+                    path: 'add',
+                    name: '提交链接',
+                    component: AddLink
+                }
+             ]
+         },
+         
      ]
  }]

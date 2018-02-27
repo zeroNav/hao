@@ -4,5 +4,13 @@
             "env"
         ]
     ],
-    "plugins": []
+    "plugins": [
+        [
+            "import",
+            {
+                "libraryName": "iview",
+                "libraryDirectory": "src/components"
+            }
+        ]
+    ]
 }

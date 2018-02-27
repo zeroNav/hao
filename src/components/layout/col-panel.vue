@@ -33,6 +33,7 @@
 	display: flex;
 	justify-content: flex-start;
 	.nav {
+		position: relative;
 		flex: none;
 		width: 220px;
 		height: 100%;
