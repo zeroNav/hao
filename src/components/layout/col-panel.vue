@@ -24,8 +24,8 @@
 .top {
 	height: $topbar-height;
 	font-size: 13px;
-	color: $topbar-color;
-	background-color: $topbar-bg;
+	// color: $topbar-color;
+	// background-color: $topbar-bg;
 }
 .col-wrap {
 	width: 100%;
@@ -46,6 +46,7 @@
 		height: 100%;
 		padding: 15px;
 		overflow-y: auto;
+		box-shadow: inset 0px 0px 5px #353535;
 	}
 }
 </style>

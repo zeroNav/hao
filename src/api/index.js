@@ -9,16 +9,20 @@ const Link = AV.Object.extend('Link')
 const LinkCat = AV.Object.extend('LinkCat')
 
 const addLink = (info) => {
-    let l = new Link()
-    l.set('category', info.category)
-    l.set('name', info.name)
-    l.set('url', info.url)
-    l.set('description', info.description)
-    l.set('zan', 0)
-    l.save().then(lnk => {
-        console.success('new link:', lnk)
-    }, err => {
-        console.error('add link error:', err)
+    return new Promise((resolve, reject) => {
+        let l = new Link()
+        l.set('category', info.category)
+        l.set('name', info.name)
+        l.set('url', info.url)
+        l.set('description', info.description)
+        l.set('zan', 0)
+        l.save().then(lnk => {
+            console.success('new link:', lnk)
+            resolve(lnk)
+        }, err => {
+            console.error('add link error:', err)
+            reject(err)
+        })
     })
 }
 
@@ -39,8 +43,14 @@ const getCats = () => {
         const queryCats = new AV.Query('LinkCat')
         queryCats.exists('name')
         queryCats.find().then(res => {
-            console.log('getting link categories:', res)
-            resolve(res)
+            // console.log('getting link categories:', res)
+            let list = res.map(item => {
+                return {
+                    name: item.attributes.name,
+                    id: item.id
+                }
+            })
+            resolve(list)
         }, err => {
             console.error('get link categories error', err)
             reject(err)
