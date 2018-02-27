@@ -1,8 +1,9 @@
 <template>
     <Menu
-        theme="light"
+        theme="dark"
         accordion
-        active-name="current_nav">
+        active-name="current_nav"
+        @on-select="pickNav">
         <template v-for="(item,i) in routes">
             <MenuItem
                 :key="item.name + i"
@@ -32,10 +33,16 @@
 
 <script>
 export default {
-  data () {
-      return {
-          routes: this.$router.options.routes[0].children
-      }
-  }
+    data () {
+        return {
+            routes: this.$router.options.routes[0].children
+        }
+    },
+    methods: {
+        pickNav(path) {
+            console.log('pick menu item:', path)
+            this.$router.push(`/${ path }`)
+        }
+    }
 }
 </script>

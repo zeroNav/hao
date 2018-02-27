@@ -35,15 +35,16 @@
 	.nav {
 		position: relative;
 		flex: none;
-		width: 220px;
+		width: 240px;
 		height: 100%;
-		color: $navbar-color;
+		// color: $navbar-color;
 		background-color: $navbar-bg;
 		overflow-y: auto;
 	}
 	.panel {
 		flex: 1;
 		height: 100%;
+		padding: 15px;
 		overflow-y: auto;
 	}
 }
