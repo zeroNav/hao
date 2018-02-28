@@ -2,11 +2,14 @@
 
 .home_wrap {
     .topbar {
-        display: flex;
-        align-items: center;
         height: 100%;
-        padding: 10px;
-        // border-bottom: 2px solid $color-red;
+        .bar {
+            height: calc(100% - 20px);
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            padding: 10px 35px;
+        }
         img {
             height: 100%;
             width: auto;
@@ -15,5 +18,11 @@
         a {
             margin-left: 20px;
         }
+    }
+    .line {
+        height: 20px;
+        width: 100%;
+        background-color: #eee;
+        box-shadow: inset 0 0px 3px #b9b9b9;
     }
 }

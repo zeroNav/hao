@@ -2,8 +2,8 @@
 * @Author: nooldey 
 * @Author-Email: <nooldey@gmail.com> 
 * @Date: 2018-01-23 16:39:27 
-* @Last Modified by: nooldey
-* @Last Modified time: 2018-02-27 16:13:38
+ * @Last Modified by: nooldey
+ * @Last Modified time: 2018-02-28 11:30:58
 * @Description: 路由列表
 */
 /* 导入组件 */
@@ -26,6 +26,9 @@ export default [{
             path: 'cat/:cat',
             props: true,
             name: '子类页面',
+            meta: {
+                hidden: true
+            },
             component: Detail
         },
         {

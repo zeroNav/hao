@@ -1,34 +1,37 @@
 <template>
-    <Menu
-        theme="dark"
+    <i-menu
+        theme="light"
+        style="height:100%;"
         accordion
         active-name="current_nav"
         @on-select="pickNav">
         <template v-for="(item,i) in routes">
-            <MenuItem
-                :key="item.name + i"
-                v-if="!item.children || !item.children.length"
-                :name="item.path">
-                {{ item.name }}
-            </MenuItem>
-            <Submenu
-                v-else
-                :key="item.name + i"
-                :name="item.path">
-                <template slot="title">
-                    <Icon type="ios-gear"></Icon>
+            <template v-if="!item.meta || !item.meta.hidden">
+                <menu-item
+                    :key="item.name + i"
+                    v-if="!item.children || !item.children.length"
+                    :name="item.path">
                     {{ item.name }}
-                </template>
-                <template v-for="(child,j) in item.children">
-                    <MenuItem
-                        :key="item.path + j"
-                        :name="item.path + '/' + child.path">
-                        {{ child.name }}
-                    </MenuItem>
-                </template>
-            </Submenu>
+                </menu-item>
+                <i-submenu
+                    v-else
+                    :key="item.name + i"
+                    :name="item.path">
+                    <template slot="title">
+                        <Icon type="ios-gear"></Icon>
+                        {{ item.name }}
+                    </template>
+                    <template v-for="(child,j) in item.children">
+                        <menu-item
+                            :key="item.path + j"
+                            :name="item.path + '/' + child.path">
+                            {{ child.name }}
+                        </menu-item>
+                    </template>
+                </i-submenu>
+            </template>
         </template>
-    </Menu>
+    </i-menu>
 </template>
 
 <script>

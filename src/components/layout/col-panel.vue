@@ -24,8 +24,6 @@
 .top {
 	height: $topbar-height;
 	font-size: 13px;
-	// color: $topbar-color;
-	// background-color: $topbar-bg;
 }
 .col-wrap {
 	width: 100%;
@@ -37,8 +35,6 @@
 		flex: none;
 		width: 240px;
 		height: 100%;
-		// color: $navbar-color;
-		background-color: $navbar-bg;
 		overflow-y: auto;
 	}
 	.panel {
@@ -46,7 +42,6 @@
 		height: 100%;
 		padding: 15px;
 		overflow-y: auto;
-		box-shadow: inset 0px 0px 5px #353535;
 	}
 }
 </style>
