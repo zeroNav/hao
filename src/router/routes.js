@@ -3,7 +3,7 @@
 * @Author-Email: <nooldey@gmail.com> 
 * @Date: 2018-01-23 16:39:27 
  * @Last Modified by: nooldey
- * @Last Modified time: 2018-02-28 11:30:58
+ * @Last Modified time: 2018-03-14 23:01:56
 * @Description: 路由列表
 */
 /* 导入组件 */
@@ -20,7 +20,8 @@ export default [{
     children: [{
             path: '',
             name: '导航首页',
-            component: Home
+            component: Home,
+            icon: 'help-buoy'
         },
         {
             path: 'cat/:cat',
@@ -34,7 +35,8 @@ export default [{
         {
             path: 'add',
             name: '提交链接',
-            component: AddLink
+            component: AddLink,
+            icon: 'gear-a'
         }
     ]
 }]

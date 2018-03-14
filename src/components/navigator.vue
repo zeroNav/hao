@@ -11,6 +11,7 @@
                     :key="item.name + i"
                     v-if="!item.children || !item.children.length"
                     :name="item.path">
+                    <Icon v-if="item.icon" :type="item.icon"></Icon>
                     {{ item.name }}
                 </menu-item>
                 <i-submenu
