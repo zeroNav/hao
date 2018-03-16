@@ -3,6 +3,7 @@
         theme="light"
         style="height:100%;"
         accordion
+        width="auto"
         active-name="current_nav"
         @on-select="pickNav">
         <template v-for="(item,i) in routes">
