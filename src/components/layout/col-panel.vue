@@ -33,7 +33,8 @@
 	.nav {
 		position: relative;
 		flex: none;
-		width: 240px;
+		width: 30%;
+		max-width: 240px;
 		height: 100%;
 		overflow-y: auto;
 	}

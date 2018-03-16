@@ -51,7 +51,8 @@ const getCats = () => {
             // console.log('getting link categories:', res)
             let list = res.map(item => {
                 return Object.assign(item.attributes, {
-                    id: item.id
+                    id: item.id,
+                    urls: []
                 }, {})
             })
             resolve(list)
@@ -62,8 +63,26 @@ const getCats = () => {
     })
 }
 
+const getLinks = (id) => {
+    return new Promise((resolve,reject) => {
+        const queryLinks = new AV.Query('Link')
+        queryLinks.exists('name')
+        queryLinks.find({categoryId: id}).then(res => {
+            console.log('get links under cat:',res)
+            let list = res.map(item => {
+                return item.attributes
+            })
+            resolve(list)
+        }, err => {
+            console.error('get cat links error', err);
+            reject(err)
+        })
+    })
+}
+
 module.exports = {
     addLink,
     addCat,
-    getCats
+    getCats,
+    getLinks,
 }

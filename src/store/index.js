@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getCats } from '../api/index'
+import { getCats,getLinks } from '../api/index'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -17,6 +17,16 @@ export default new Vuex.Store({
             if (Array.isArray(payload)) {
                 state.linkCats = payload
             }
+        },
+        'push/links'(state,{ id,res }) {
+            const temp = state.linkCats;
+            temp.some(cat => {
+                if (cat.id === id) {
+                    cat.urls = res;
+                    return true;
+                }
+            })
+            state.linkCats = temp;
         }
     },
     actions: {
@@ -32,6 +42,11 @@ export default new Vuex.Store({
             getCats().then(res => {
                 commit('push/cats', res)
                 commit('set/timeStamp')
+            })
+        },
+        getCatLinks({ commit,state },id) {
+            getLinks(id).then(res => {
+                commit('push/links',{ id,res })
             })
         }
     }
