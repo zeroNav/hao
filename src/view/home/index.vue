@@ -7,7 +7,7 @@
         :gutter="15">
         <i-col span="4" class-name="title">
           <Icon type="folder"></Icon>
-          <span @click="getLink(cat.id)">
+          <span @click="getLink(cat)">
             {{ cat.name }}
           </span>
         </i-col>
@@ -41,9 +41,9 @@ export default {
     this.$store.dispatch('getLinkCats')
   },
   methods: {
-    getLink(id) {
-      if (!id) return;
-      this.$store.dispatch('getCatLinks', id)
+    getLink(cat) {
+      if (!cat.id || cat.urls.length) return;
+      this.$store.dispatch('getCatLinks', cat.id)
     }
   }
 }
