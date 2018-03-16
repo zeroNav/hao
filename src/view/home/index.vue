@@ -51,7 +51,7 @@ export default {
 
 <style lang="scss">
   .link_row {
-    margin: 15px 0;
+    margin-bottom: 30px;
     font-size: 16px;
     .title {
       border-right: 2px solid #333;

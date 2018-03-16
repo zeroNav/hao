@@ -67,7 +67,8 @@ const getLinks = (id) => {
     return new Promise((resolve,reject) => {
         const queryLinks = new AV.Query('Link')
         queryLinks.exists('name')
-        queryLinks.find({categoryId: id}).then(res => {
+        queryLinks.equalTo('categoryId',id)
+        queryLinks.find().then(res => {
             console.log('get links under cat:',res)
             let list = res.map(item => {
                 return item.attributes
