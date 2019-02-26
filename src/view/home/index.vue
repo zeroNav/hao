@@ -16,6 +16,7 @@
             v-for="(u,i) in cat.urls"
             :key="i"
             :href="u.url"
+            target="_blank"
             :title="u.description"
           >
             {{ u.name }}
@@ -39,6 +40,9 @@ export default {
   },
   mounted() {
     this.$store.dispatch('getLinkCats')
+    this.$nextTick(() => {
+      this.getLink(this.linkCats[0])
+    })
   },
   methods: {
     getLink(cat) {
